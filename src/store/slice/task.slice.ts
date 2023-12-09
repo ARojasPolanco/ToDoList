@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 interface InitialState {
-    tasks: []
+    tasks: any[]
 }
 
 const initialState: InitialState = {
@@ -13,7 +13,7 @@ const tasksSlice = createSlice({
     name: 'tasks',
     reducers: {
         addTask: (state, action) => {
-            const newTask= action.payload
+            const newTask = action.payload
             state.tasks.push(newTask)
         },
         deleteTask: (state, action) => {
